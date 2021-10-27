@@ -57,13 +57,8 @@ module.exports = async (req, res) => {
         ],
       });
     });
+    res.status(200).send('Successfully listed');
   } catch (err) {
     res.send(err);
   }
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Successfully listed',
-    }),
-  };
 };

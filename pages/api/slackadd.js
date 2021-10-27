@@ -49,16 +49,11 @@ module.exports = async (req, res) => {
           ],
         },
       });
+      res.status(200).send('Successfully added to spreadsheet');
     } catch (err) {
       return err;
     }
   } catch (err) {
     res.send(err);
   }
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Successfully added to spreadsheet',
-    }),
-  };
 };
